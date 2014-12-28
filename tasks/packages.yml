@@ -1,0 +1,28 @@
+---
+
+- name: Packages pinning
+  template: >
+    src=pinning.j2
+    dest=/etc/apt/preferences.d/rabbitmq
+  sudo: yes 
+
+- name: Adding RabbitMQ repository key
+  apt_key: >
+    url={{ elao_rabbitmq_signing_key }}
+    state=present
+  sudo: yes
+
+- name: Adding repositories
+  apt_repository: >
+    repo="{{ elao_rabbitmq_repository }}"
+    state=present
+    update_cache=yes
+  sudo: yes
+
+- name: packages
+  apt: >
+    name={{ item }}
+    state=present
+  with_items:
+    - rabbitmq-server
+  sudo: yes

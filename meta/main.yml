@@ -1,0 +1,24 @@
+---
+
+galaxy_info:
+  author: ELAO
+  description: >
+    RabbitMQ is a messaging broker - an intermediary for messaging. 
+    It gives your applications a common platform to send and receive messages, and your messages a safe place to live until received.
+    This role will install RabbitMQ on the spedified hosts, it's part of the ELAO Ansible stack but can be used stand alone.
+  license: MIT
+  min_ansible_version: 1.7.2
+  platforms:
+  - name: Debian
+    versions:
+    - wheezy (7.X)
+    - jessie (Testing)
+  #
+  # Below are all categories currently available. Just as with
+  # the platforms above, uncomment those that apply to your role.
+  #
+  categories:
+  - cloud
+  - developpement
+  - networking
+  - web

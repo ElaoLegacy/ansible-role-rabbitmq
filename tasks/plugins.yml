@@ -1,0 +1,6 @@
+---
+
+- name: Installing RabbitMQ plugins
+  shell: "rabbitmq-plugins enable {{ item }}"
+  with_items: elao_rabbitmq_plugins
+  sudo: yes

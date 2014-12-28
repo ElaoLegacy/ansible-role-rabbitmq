@@ -1,0 +1,35 @@
+---
+
+elao_rabbitmq_signing_key:  http://www.rabbitmq.com/rabbitmq-signing-key-public.asc
+elao_rabbitmq_repository:   deb http://www.rabbitmq.com/debian/ testing main
+
+elao_rabbitmq_user:         rabbitmq
+elao_rabbitmq_group:        rabbitmq
+
+# Plugins
+elao_rabbitmq_plugins:      []
+elao_rabbitmq_new_only:     "no"
+
+# Vhosts and Users
+elao_rabbitmq_vhosts:       []
+elao_rabbitmq_users:        []
+
+# Configuration
+elao_rabbitmq_tcp_listeners:
+    -
+        address:    127.0.0.1
+        port:       5672
+    - 
+        address:    "{{ ansible_venet0_0.ipv4.address }}"
+        port:       5672
+
+elao_rabbitmq_ssl_listeners:
+    -
+        address:    127.0.0.1
+        port:       5671
+    - 
+        address:    "{{ ansible_venet0_0.ipv4.address }}"
+        port:       5671
+
+elao_rabbitmq_handshake_timeout:     10000
+elao_rabbitmq_ssl_handshake_timeout: 5000
