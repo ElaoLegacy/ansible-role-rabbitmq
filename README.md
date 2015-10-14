@@ -1,3 +1,13 @@
+WARNING: This role is no longer maintained !!!
+==============================================
+
+You are strongly encouraged to switch to the new roles stack on https://github.com/ElaoInfra
+--------------------------------------------------------------------------------------------
+
+By the way, this role will remain available on https://github.com/ElaoLegacy
+----------------------------------------------------------------------------
+
+
 # Ansible Role: RabbitMQ
 
 This role will install RabbitMQ on the spedified hosts, it's part of the ELAO Ansible stack but can be used stand alone.
